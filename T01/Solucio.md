@@ -4,7 +4,7 @@
 
 ---
 
-## 📑 Índex
+## Índex
 1. [Justificació](#1-justificació)  
 2. [Comparativa Tècnica](#2-comparativa-tècnica)  
 3. [Avantatges i Inconvenients](#3-avantatges-i-inconvenients)  
