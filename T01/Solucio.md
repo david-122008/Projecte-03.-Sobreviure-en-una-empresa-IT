@@ -4,9 +4,17 @@
 
 ---
 
+## 📑 Índex
+1. [Justificació](#1-justificació)  
+2. [Comparativa Tècnica](#2-comparativa-tècnica)  
+3. [Avantatges i Inconvenients](#3-avantatges-i-inconvenients)  
+4. [Recomanació](#4-recomanació)  
+
+---
+
 ## 1. Justificació
 
-L’equip de direcció tècnica ha decidit triar l'opció d'utilitzar un gestor de contrasenyes per evitar incidents derivats de l’ús de contrasenyes febles o reutilitzades.  
+L’equip de direcció tècnica ha decidit triar l'opció d'utilitzar un **gestor de contrasenyes** per evitar incidents derivats de l’ús de contrasenyes febles o reutilitzades.  
 Els usuaris acostumen a crear contrasenyes fàcils de descobrir o utilitzar la mateixa per a diversos serveis, cosa que suposa un risc crític per a la seguretat corporativa.
 
 Les contrasenyes febles —com noms propis, dates o combinacions curtes— poden ser vulnerades amb tècniques de força bruta o enginyeria social.  
@@ -62,3 +70,4 @@ Aquestes característiques el fan més adequat per al **personal tècnic**, ja q
 
 **Conclusió:**  
 Bitwarden és la solució més equilibrada per garantir **seguretat, usabilitat i continuïtat del negoci**, mantenint alhora la possibilitat de control intern sobre la infraestructura.
+
