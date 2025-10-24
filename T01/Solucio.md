@@ -71,3 +71,5 @@ Aquestes característiques el fan més adequat per al **personal tècnic**, ja q
 **Conclusió:**  
 Bitwarden és la solució més equilibrada per garantir **seguretat, usabilitat i continuïtat del negoci**, mantenint alhora la possibilitat de control intern sobre la infraestructura.
 
+[torna al enunciat](README.md)
+
