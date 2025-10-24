@@ -1,64 +1,71 @@
-# Gestor de contrasenyes  
-**Data:** 21/10/2025  
-**Autor:** David Català  
+# Alerta!!
+
+EverPia ha estat atacada per ciberdelinqüents. La consultora on esteu de becaris ha patit una fuita d’informació (data breach) i informació confidencial sobre un projecte que està en fase de desenvolupament està ara en mans de delinqüents que amenacen amb publicar-la si no es paga un rescat.
+
+Òbviament, això ha causat una gran alarma dins la companyia i s’ha creat un comitè de crisi per gestionar la situació.  
+La investigació interna ha revelat que un dels comptes tècnics va ser compromès a causa de l'ús d'una contrasenya feble o reutilitzada.
+
+Com a resposta a aquesta crisi, la Direcció Tècnica ha emès una directriu: tot el personal tècnic ha de començar a utilitzar un gestor de contrasenyes validat per garantir l'ús de credencials úniques i robustes. Se us encarrega la tasca d'avaluar les opcions i crear la documentació necessària per a la formació del personal.
+
+## Fase 1: Anàlisi i Justificació (Document d'Informe)
+
+Heu de redactar un informe que justifiqui tècnicament la decisió de la Direcció i comparin les opcions. Aquest informe ha d'incloure:
+
+### Introducció i Justificació
+
+- Explicació de per què les contrasenyes febles o reutilitzades són un risc crític per a l'empresa (atac de diccionari, credential stuffing, etc.).
+- La funció crucial d'un gestor de contrasenyes per mitigar aquests riscos.
+
+### Comparativa Tècnica
+
+Realitzeu una taula comparativa detallada entre:
+
+- **Bitwarden (Alternativa Online / Núvol):**  
+  Analitzeu la sincronització, el model de seguretat (xifratge end-to-end), la facilitat d'accés des de múltiples dispositius i el cost/model freemium.
+
+- **KeePassX / KeePassXC (Alternativa Offline / Escriptori):**  
+  Analitzeu l'emmagatzematge local de l'arxiu (KDBX), la independència del núvol, el model open source i la portabilitat de l'arxiu.
+
+### Avantatges i Inconvenients
+
+Resumiu els principals pros i contres de cada model (online vs. offline) des del punt de vista de seguretat, usabilitat i continuïtat del negoci.
+
+### Recomanació
+
+Concloeu l'informe escollint l'eina que considereu més adequada per al personal tècnic de l'empresa i justifiqueu la vostra elecció.
+
+## Fase 2: Guia d'Ús Tècnica (Manual Operatiu)
+
+Utilitzant l'eina que heu seleccionat a la Fase 1 (Bitwarden, KeePassX, o similar), heu de crear una Guia d'Ús per a l'Equip Tècnic. Aquesta guia ha de ser clara i basada en captures de pantalla i instruccions pas a pas.
+
+La guia ha de cobrir els següents punts obligatoris:
+
+### Instal·lació i Configuració Inicial
+
+- Descàrrega, instal·lació i creació de la BBDD principal o compte mestre.
+
+### Generació de Contrasenyes Segures
+
+- Explicació de com utilitzar el generador de contrasenyes de l'eina (paràmetres, longitud, caràcters especials).
+
+### Exemples d'Ús i Emplenament Automàtic
+
+- Com desar una credencial d'un compte de correu electrònic.
+- Com desar una credencial d'una aplicació o servei web.
+- Com fer servir l’extensió del navegador per emplenar automàticament les dades.
+
+### Gestió de Còpies de Seguretat (Backup)
+
+- Explicació detallada de com fer una còpia de seguretat de l'arxiu de contrasenyes (KDBX en KeePass o Exportació en Bitwarden).
+- Recomanació de la millor pràctica per emmagatzemar aquesta còpia de seguretat de forma segura (clau USB xifrada o emmagatzematge xifrat al núvol).
 
 ---
 
-## 1. Justificació
+Es tracta d’una tasca individual.
 
-L’equip de direcció tècnica ha decidit triar l'opció d'utilitzar un gestor de contrasenyes per evitar incidents derivats de l’ús de contrasenyes febles o reutilitzades.  
-Els usuaris acostumen a crear contrasenyes fàcils de descobrir o utilitzar la mateixa per a diversos serveis, cosa que suposa un risc crític per a la seguretat corporativa.
+### Què caldrà lliurar?
 
-Les contrasenyes febles —com noms propis, dates o combinacions curtes— poden ser vulnerades amb tècniques de força bruta o enginyeria social.  
-A més, la reutilització de contrasenyes pot provocar que un atacant accedeixi a altres plataformes corporatives si una d’elles es veu compromesa (*credential stuffing*).
+Dins el repositori del projecte-3 heu de crear una carpeta anomenada `tasca01`, dins d’ella heu de tenir un arxiu `README.md` amb la descripció de la tasca i enllaços als arxius de l’informe i la guia.
 
-### Principals riscos:
-- Accés no autoritzat a informació corporativa i dades de clients.  
-- Atacs interns dins l’estructura de l’empresa.  
-- Pèrdua o alteració de dades.  
-- Dany econòmic i sancions per incompliment normatiu.  
-
-### Mesures recomanades:
-- Utilitzar **contrasenyes fortes, úniques i complexes** per a cada compte.  
-- Fer ús d’un **gestor de contrasenyes corporatiu**.  
-- Activar l’**autenticació multifactor (MFA)**.
-
----
-
-## 2. Comparativa Tècnica
-
-| **Criteri** | **Bitwarden (Online / Núvol)** | **KeePassX / KeePassXC (Offline / Escriptori)** |
-|--------------|--------------------------------|-----------------------------------------------|
-| **Model** | Solució al núvol amb opció *self-hosted*. Sincronització automàtica entre dispositius. | Aplicació local amb fitxer xifrat (.kdbx). Sense sincronització integrada. |
-| **Xifratge / Seguretat** | Xifratge *end-to-end* (AES-256 + PBKDF2/Argon2id). El proveïdor no pot veure les dades. | Xifratge local AES-256 del fitxer .kdbx. Seguretat dependent de la clau mestra. |
-| **Sincronització** | Automàtica via servidor (núvol o instància pròpia). | Manual, mitjançant serveis externs (Nextcloud, Dropbox, etc.). |
-| **Accés multi-dispositiu** | Aplicacions per escriptori, web, mòbil i extensions de navegador. | Portable entre dispositius, però sincronització manual. |
-| **Control de dades** | Dades xifrades al núvol o servidor propi. | Control total local sense dependència externa. |
-| **Model econòmic** | *Freemium*: pla gratuït + opcions empresarials. | Gratuït i *open-source*. Sense llicència. |
-| **Gestió empresarial** | Permet compartició i administració centralitzada. | Sense gestió central; compartició mitjançant fitxers. |
-| **Ideal per a...** | Empreses que necessiten sincronització i control centralitzat. | Organitzacions que busquen control local i simplicitat tècnica. |
-
----
-
-## 3. Avantatges i Inconvenients
-
-| **Aspecte** | **Bitwarden (Online / Núvol)** | **KeePassX / KeePassXC (Offline / Escriptori)** |
-|--------------|--------------------------------|-----------------------------------------------|
-| **Seguretat** | **Avantatges:**<br>• Xifratge end-to-end.<br>• Auditories externes.<br>• Opció *self-hosted*.<br>**Inconvenients:**<br>• Dependència del núvol o servidor propi.<br>• Superfície d’atac més gran. | **Avantatges:**<br>• Emmagatzematge local.<br>• Xifratge fort (AES-256 / Argon2).<br>• Control total de dades.<br>**Inconvenients:**<br>• Si es perd el fitxer o la clau, es perd tot.<br>• Sense MFA ni gestió central. |
-| **Usabilitat** | **Avantatges:**<br>• Sincronització automàtica.<br>• Accessible des de qualsevol dispositiu.<br>**Inconvenients:**<br>• Requereix Internet per sincronitzar.<br>• Algunes funcions són de pagament. | **Avantatges:**<br>• Funcionament offline.<br>• Portable i multiplataforma.<br>**Inconvenients:**<br>• Sincronització manual.<br>• Menys pràctic per a diversos dispositius. |
-| **Continuïtat del negoci** | **Avantatges:**<br>• Alta disponibilitat i còpies al núvol.<br>• Recuperació senzilla.<br>**Inconvenients:**<br>• Dependència del servei o servidor *self-hosted*. | **Avantatges:**<br>• Independència total de proveïdors.<br>• Continuïtat garantida amb còpies internes.<br>**Inconvenients:**<br>• Gestió pròpia de còpies i actualitzacions.<br>• Sense suport tècnic oficial. |
-
----
-
-## 4. Recomanació
-
-L’equip de direcció tècnica recomana **Bitwarden** com a gestor de contrasenyes corporatiu.
-
-**Justificació:**  
-Bitwarden ofereix **alt nivell de seguretat** amb xifratge *end-to-end*, **sincronització automàtica entre dispositius** i possibilitat d’instal·lació *self-hosted*.  
-Aquestes característiques el fan més adequat per al **personal tècnic**, ja que combina seguretat, eficiència i facilitat de gestió centralitzada.
-
----
-
-**Conclusió:**  
-Bitwarden és la solució més equilibrada per garantir **seguretat, usabilitat i continuïtat del negoci**, mantenint alhora la possibilitat de control intern sobre la infraestructura.
+- L’informe corresponent a la fase 1, el lliurareu amb un arxiu que anomenareu `informe.md`.
+- La guia s’anomenarà `guia.md`
