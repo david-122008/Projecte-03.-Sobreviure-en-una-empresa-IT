@@ -69,3 +69,5 @@ Dins el repositori del projecte-3 heu de crear una carpeta anomenada `tasca01`, 
 
 - L’informe corresponent a la fase 1, el lliurareu amb un arxiu que anomenareu `informe.md`.
 - La guia s’anomenarà `guia.md`
+
+  a l'arxiu [solució.md](Solucio.md) hi ha la solució
