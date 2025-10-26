@@ -1,135 +1,155 @@
 # Gestor de contrasenyes: Bitwarden
 
-En aquesta guia, es mostraran les pautes per instal·lar Bitwarden.
+En aquesta guia, es mostraran les pautes per instal·lar **Bitwarden**.
 
----
+
 
 ## 1. Descarregar Bitwarden
 
-Descarregar Bitwarden a la seva pàgina principal, li donarem a **Download**.  
-Li donarem al sistema operatiu que tinguin els nostres dispositius.
+Descarrega Bitwarden des de la seva pàgina principal fent clic a **Download**.  
 
-![Imatge 01](img/IM1.png)
+![Imatge 01](IMG/IM1.png)
 
----
+Selecciona el sistema operatiu que tinguin els teus dispositius.
 
-## 2. Executar aplicació
+![Imatge 02](IMG/IM2.png)
 
-A l'executar l’aplicació, li donarem a **Crear compte nou**, on ens sortirà el següent menú on posarem el nostre correu i el nom que volem tindre.
+## 2. Executar l’aplicació
 
-![IMAGEN 2 AQUÍ]
+En executar l’aplicació, fes clic a **Crear compte nou**.  
+Apareixerà un menú on hauràs d’introduir el teu **correu electrònic** i el **nom d’usuari** que vulguis.
 
-Seguidament, ens enviarà un correu on verificarem el Gmail.
+![Imatge 03](IMG/IM3.png)
 
-![IMAGEN 3 AQUÍ]
+Seguidament, rebràs un correu per verificar el teu compte de Gmail.
 
-Un cop verificat el Gmail, ens sortirà el següent, on posarem la **contrasenya mestra**.  
-Apunta-la en una memòria USB o en un lloc segur que recordis.
+![Imatge 04](IMG/IM4.png)
 
-![IMAGEN 4 AQUÍ]
+Un cop verificat, introdueix la **contrasenya mestra**.  
+*Apunta-la en una memòria USB o guarda-la en un lloc segur que puguis recordar.*
 
----
+![Imatge 05](IMG/IM5.png)
 
-## 3. Obrir aplicació
+## 3. Obrir l’aplicació
 
-Un cop dintre de l’aplicació, ja podrem afegir les nostres contrasenyes donant-li al **+** de la part inferior dreta.
+![Imatge 06](IMG/IM6.png)
 
-![IMAGEN 5 AQUÍ]
+Un cop dins de l’aplicació, ja podràs afegir les teves contrasenyes fent clic al **+** de la part inferior dreta.
 
-On triarem el nom que li volem posar, la credencial del compte, etc.
+![Imatge 07](IMG/IM7.png)
 
-![IMAGEN 6 AQUÍ]
+Introdueix:
+- El **nom** que vols assignar.
+- La **credencial del compte**.
+- Altres dades necessàries.
 
 ---
 
 ## Extensió
 
-### 1. Com instal·lar-la
+### 1. Instal·lació
 
-Per instal·lar, tornarem a la pàgina de Bitwarden a la part de **Downloads** i triarem l'opció de descarregar l’extensió pel tipus de navegador que tenim.
+Per instal·lar l’extensió, torna a la pàgina de **Bitwarden** a la secció **Downloads** i tria l’opció per descarregar l’extensió segons el navegador que utilitzis.
 
-![IMAGEN 7 AQUÍ]
+![Imatge 08](IMG/IM8.png)
 
-Li donem a **Free Account**.
+Fes clic a **Free Account**  
+i després a **Create Free Account**.
 
-![IMAGEN 8 AQUÍ]
+![Imatge 09](IMG/IM9.png)
 
-Després a **Create Free Account**, introduïm el nostre correu electrònic.  
-Després d’això, anirem al nostre correu per verificar. Encara que ja la tinguem creada, ho hem de fer.
+Introdueix el teu correu electrònic i verifica’l (encara que ja tinguis un compte creat).
 
-Anirem al **logo del puzle** de la part dreta de la pantalla.
+![Imatge 10](IMG/IM10.png)
 
-![IMAGEN 9 AQUÍ]
+Després:
+1. Fes clic al **logo del puzle** de la part dreta del navegador.
 
-Li donarem a **Bitwarden** i després a **Accedir**.
+![Imatge 11](IMG/IM11.png)
 
-![IMAGEN 10 AQUÍ]
+2. Selecciona **Bitwarden**.
 
-Posem el correu.
+![Imatge 12](IMG/IM12.png)
 
-![IMAGEN 11 AQUÍ]
+3. Inicia sessió amb el teu **correu** i **contrasenya mestra**.
 
-Posem la **contrasenya mestra**.
+![Imatge 13](IMG/IM13.png)
+![Imatge 14](IMG/IM14.png)
+![Imatge 15](IMG/IM15.png)
 
-![IMAGEN 12 AQUÍ]
+5. Verifica amb el **codi enviat al teu correu principal**.
 
-Ara anirem al correu principal i posarem el **codi de verificació** que ens han enviat.
+![Imatge 16](IMG/IM16.png)
 
-![IMAGEN 13 AQUÍ]
+Ara ja podràs veure i guardar les teves contrasenyes.
 
-I ja podrem entrar a veure i guardar les contrasenyes.
-
-![IMAGEN 14 AQUÍ]
-
----
+![Imatge 17](IMG/IM17.png)
 
 ## Extras
 
-### 1. Com desar la credencial
+### 1. Com desar una credencial
 
-Com s’ha indicat abans, hem de donar-li al **+**.  
-Li donarem a **Inici de sessió**.
+Com s’ha indicat abans, fes clic al **+**  
 
-![IMAGEN 15 AQUÍ]
+![Imatge 06](IMG/IM06.png)
 
-Posarem el nom que volem i el compte amb la contrasenya.
+Selecciona **Inici de sessió** 
 
-![IMAGEN 16 AQUÍ]
+![Imatge 18](IMG/IM18.png)
 
----
+i introdueix:
+- El **nom del compte**
+- La **contrasenya corresponent**
 
-### 2. Com fer servir l’extensió del navegador per emplenar automàticament les dades
+![Imatge 07](IMG/IM07.png)
 
-Posarem a **Utilitzar un altre compte**.
+### 2. Com utilitzar l’extensió del navegador per emplenar automàticament les dades
 
-![IMAGEN 17 AQUÍ]
+Fes clic a **Utilitzar un altre compte**.
 
-Després posem el nostre correu, si és necessari tornar a posar-lo, i quan posem la contrasenya hem de donar-li al logo de la dreta i pitjarem **Guardar en Bitwarden**.
+![Imatge 19](IMG/IM19.png)
 
-I quan tornem a iniciar sessió, ens sortirà el nom que li hem posat amb la contrasenya.  
-Per comprovar-ho, si iniciem sessió a l'extensió:
+Després:
+- Introdueix el teu **correu** (si cal, torna a escriure’l).
+- Escriu la **contrasenya** i fes clic al **logo de la dreta**.
+- Prem **Guardar en Bitwarden**.
 
-![IMAGEN 18 AQUÍ]
+![Imatge 20](IMG/IM20.png)
 
----
+Quan tornis a iniciar sessió, apareixerà el **nom** i la **contrasenya** guardats.  
+
+![Imatge 21](IMG/IM21.png)
+
+Pots comprovar-ho iniciant sessió des de l’extensió.
+
+![Imatge 22](IMG/IM22.png)
 
 ### 3. Gestió de còpies de seguretat
 
-Per fer-ho haurem d’iniciar sessió a la pàgina principal de Bitwarden, i ens sortirà aquest menú.  
-Li donarem a **Eines**, i a les opcions li donarem a **Exportar caixa forta**.
+Per fer-ho, inicia sessió a la **pàgina principal de Bitwarden**.  
+Des del menú, selecciona:
 
-![IMAGEN 19 AQUÍ]
+![Imatge 23](IMG/IM23.png)
 
-Li donarem al format recomanat **.json**.
+1. **Eines** → **Exportar caixa forta**
 
-![IMAGEN 20 AQUÍ]
+![Imatge 24](IMG/IM24.png)
 
-Se'ns exportarà l’arxiu al nostre explorador d’arxius, i un cop fet, passarem l’arxiu a una memòria USB o a un disc dur extern físic, perquè no ens ho puguin hackejar.
+3. Tria el format recomanat **.json**
+
+![Imatge 25](IMG/IM25.png)
+
+L’arxiu s’exportarà a l’explorador d’arxius.  
+Guarda’l en una **memòria USB** o **disc dur extern** per més seguretat.
 
 ---
 
 ### 4. Generador de contrasenyes
 
-Per generar les contrasenyes haurem d’anar al menú de la pàgina web on li donarem a **Generador**, on podrem triar la longitud, el tipus de caràcters, etc.
+Per generar contrasenyes, ves al menú de la pàgina web i selecciona **Generador**.  
+Podràs triar:
+- La **longitud**
+- El **tipus de caràcters**
+- Altres paràmetres personalitzats
 
-![IMAGEN 21 AQUÍ]
+![Imatge 26](IMG/IM26.png)
