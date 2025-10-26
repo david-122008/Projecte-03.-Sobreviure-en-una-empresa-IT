@@ -9,7 +9,7 @@ En aquesta guia, es mostraran les pautes per instal·lar Bitwarden.
 Descarregar Bitwarden a la seva pàgina principal, li donarem a **Download**.  
 Li donarem al sistema operatiu que tinguin els nostres dispositius.
 
-![IMAGEN 1 AQUÍ]
+![Imatge 01](img/IM1.png)
 
 ---
 
