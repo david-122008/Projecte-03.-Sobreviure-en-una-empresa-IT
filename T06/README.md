@@ -14,19 +14,19 @@
 - Executa `dig tecnocampus.cat NS`
 - **Anàlisi:** Quins són els servidors de noms autoritatius per a aquest domini?
 
-![Imatge 01](IMG/IMA2.png)
+![Imatge 02](IMG/IMA2.png)
 
 ### ● Comanda 3: Consulta Detallada SOA
 - Executa `dig escolapia.cat SOA`
 - **Anàlisi:** Quina és la informació del correu de l'administrador i el número de sèrie del domini?
 
-![Imatge 01](IMG/IMA3.png)
+![Imatge 03](IMG/IMA3.png)
 
 ### ● Comanda 4: Consulta resolució inversa
 - Executa comanda `dig -x 147.83.2.135`
 - **Anàlisi:** Quina informació sobre els registres s’obté?
 
-![Imatge 01](IMG/IMA4.png)
+![Imatge 04](IMG/IMA4.png)
 
 ## Comprovació de Resolució amb nslookup (Multiplataforma)
 
@@ -46,7 +46,7 @@ El mode és força senzill, bàsicament hi ha tres comandes a usar:
 
 > La resposta *Non-authoritative answer* ens dona la informació que la resposta no ve directament del DNS.
 
-![Imatge 01](IMG/IMA5.png)
+![Imatge 05](IMG/IMA5.png)
 
 ### ● Comanda 2: Consultes autoritatives
 - Escriure `server IP` i escriure la IP del primer servidor de noms del domini `tecnocampus.cat` que s’ha obtingut d’una consulta anterior.  
