@@ -52,3 +52,5 @@ El mode és força senzill, bàsicament hi ha tres comandes a usar:
 - Escriure `server IP` i escriure la IP del primer servidor de noms del domini `tecnocampus.cat` que s’ha obtingut d’una consulta anterior.  
   A continuació, indiqueu que voleu consultar registres de tipus `A` i del domini `tecnocampus.cat`.
 - **Anàlisi:** Quines diferències s’observen a la resposta obtinguda amb la comanda 1?
+
+[torna al enunciat](README.md)
