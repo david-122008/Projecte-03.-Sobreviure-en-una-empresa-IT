@@ -1,40 +1,83 @@
-# Fase Pràctica: Diagnosi de Noms (Auditoria amb CLI)
+# Auditoria i Formació sobre el Servei DNS (DigiCore)
+Com a membres de l’equip tècnic de la consultora EverPia, se us ha encarregat resoldre un problema de resolució de noms (DNS) que afecta l’empresa de màrqueting digital DigiCore. L’objectiu és realitzar una auditoria teòrica i pràctica per formar el seu personal i proporcionar eines de diagnosi ràpides.
 
-Heu de demostrar l'ús de les principals utilitats de diagnosi DNS en els diferents sistemes operatius que utilitza el client (Linux/macOS i Windows). Per a cada eina, executeu les comandes indicades a continuació contra el domini que s’indiqui explícitament i captureu/analitzeu els resultats. Per fer aquest demostració, caldrà usar un equip Zorin amb dues interfícies, la primera en NAT i la segona en adaptador pont amb la IP correctament configurada segons indicacions dels vostres responsables.
+## Fase Teòrica: Sessió Formativa
+Cal preparar un material formatiu que expliqui:
 
-## A. Diagnosi Avançada amb dig (Linux / macOS)
+### Jerarquia i Estructura del DNS
+Estructura en arbre: Root → TLD → Domini de segon nivell.
 
-### Comanda 1: Consulta Bàsica de Registre A
-Executa `dig xtec.cat A`  
-**Anàlisi:** Identifica la IP de resposta, el valor TTL i el servidor que ha respost a la consulta.
+### Procés de Resolució
+Consulta iterativa i recursiva. Servidor Root, servidor autoritatiu.
 
-### Comanda 2: Consulta de Servidors de Noms (NS)
-Executa `dig tecnocampus.cat NS`  
-**Anàlisi:** Quins són els servidors de noms autoritatius per a aquest domini?
+### Tipus de Zones
+Zona directa i zona inversa. Zona primària i zona secundària.
 
-### Comanda 3: Consulta Detallada SOA
-Executa `dig escolapia.cat SOA`  
-**Anàlisi:** Quina és la informació del correu de l'administrador i el número de sèrie del domini?
+### Registres DNS Principals
+A: relació domini → IPv4.
+CNAME: alias d’un altre nom.
+MX: servidors de correu.
+NS: servidors de noms autoritatius.
+SRV: especificació de serveis i ports.
 
-### Comanda 4: Consulta resolució inversa
-Executa `dig -x 147.83.2.135`  
-**Anàlisi:** Quina informació sobre els registres s’obté?
+### Conceptes Essencials
+Resposta autoritativa: indica que la informació prové del servidor propietari de la zona.
+TTL (Time To Live): control de la persistència en memòria cau.
+SOA (Start of Authority): informació essencial del domini (origen, mail admin, número de sèrie).
+Reenviadors: condicionals i incondicionals.
 
-## Comprovació de Resolució amb nslookup (Multiplataforma)
+### Resolució Local
+Resolució de noms dins xarxes sense servidor DNS dedicat. Protocol mDNS.
 
-L’eina `nslookup` es troba a pràcticament a qualsevol sistema operatiu. Es pot usar de forma similar a `dig` incloent l’argument o si s’executa `nslookup` sense arguments, entrar en el mode interactiu, us apareix un prompt (`>`). Serà aquest mode el que explorareu.
+### Activitat Fase Teòrica
+Crear un vídeo formatiu de 10-15 minuts explicant tots els conceptes anteriors.
 
-El mode és força senzill, bàsicament hi ha tres comandes a usar:  
-- `set type=` per indicar el tipus de consulta: `A`, `AAA`, `MX`, `NS`, `SOA`, `TXT` o `ALL`.  
-- `server IP` on IP és la IP del servidor de noms al que es vol fer la consulta, també es pot indicar el nom del servidor enlloc de la IP, per exemple, `server a9-66.akam.net`.  
-- `exit` que serveix per sortir de la comanda.
+## Fase Pràctica: Diagnosi de DNS amb CLI
+S’utilitzarà un equip Zorin amb una interfície en NAT i una en adaptador pont configurat.
 
-### Comanda 1: Consulta Bàsica no Autoritativa
-Seleccionar `type=A` i com a domini de consulta `tecnocampus.cat`  
-**Anàlisi:** Per què indica que la resposta és no autoritativa?
+### Diagnosi amb dig (Linux/macOS)
+1. Consulta A:
+   dig xtec.cat A
+   Identificar IP, TTL i servidor que respon.
 
-### Comanda 2: Consultes autoritatives
-Escriure `server IP` i escriure la IP del primer servidor de noms del domini `tecnocampus.cat` que s’ha obtingut d’una consulta anterior. A continuació, indiqueu que voleu consultar registres de tipus `A` i del domini `tecnocampus.cat`.  
-**Anàlisi:** Quines diferències s’observen a la resposta obtinguda amb la comanda 1?
+2. Consulta NS:
+   dig tecnocampus.cat NS
+   Identificar servidors de noms autoritatius.
 
+3. Consulta SOA:
+   dig escolapia.cat SOA
+   Identificar correu de l’administrador i número de sèrie.
+
+4. Resolució inversa:
+   dig -x 147.83.2.135
+   Observar registre PTR.
+
+### Diagnosi amb nslookup
+Entrar en mode interactiu:
+nslookup
+
+Comandes:
+set type=<TIPUS> (A, AAAA, MX, NS, SOA, etc.)
+server <IP o NOM>
+exit
+
+1. Consulta no autoritativa:
+   set type=A
+   tecnocampus.cat
+   Analitzar per què no és autoritativa.
+
+2. Consulta autoritativa:
+   server <IP_del_NS_autoritatiu>
+   set type=A
+   tecnocampus.cat
+   Comparar amb la resposta anterior.
+
+### Resolució Local
+Comprovació del funcionament de resolució dins LAN sense servidor DNS (mDNS).
+
+## Activitat Final
+Crear un document guia.md amb:
+- Captures de totes les consultes
+- Resultats i explicacions
+- Proves de resolució local
 [solució.md](Solucio.md)
