@@ -82,3 +82,4 @@ Crear un document guia.md amb:
 - Proves de resolució local
   
 [solució.md](Solucio.md)
+[solució.md](Solucio1.md)
