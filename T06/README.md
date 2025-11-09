@@ -80,4 +80,5 @@ Crear un document guia.md amb:
 - Captures de totes les consultes
 - Resultats i explicacions
 - Proves de resolució local
+  
 [solució.md](Solucio.md)
