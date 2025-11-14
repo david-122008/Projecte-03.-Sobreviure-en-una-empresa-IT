@@ -1,58 +1,82 @@
-# DISCS
+# T03: Gestió flexible de discos (LVM i Espais d’emmagatzematge)
 
-## 1. Creació de la màquina
-El primer de tot serà crear la màquina amb els paràmetres inicials.
+## Breu descripció
+Un cop superada la fase de formació, ja esteu preparats per afrontar el repte dels nostres clients. Tenim un nou i important client: el bufet d’advocats **Garriga i Associats**, un dels més prestigiosos de la ciutat. Gestiona una gran quantitat d'informació legal sensible, per la qual cosa la integritat, la disponibilitat (alta redundància) i la facilitat de gestió del seu emmagatzematge són d'importància crítica.
 
-## 2. Configuració de l’espai de la màquina
-Després entrarem a la configuració d'espai de la màquina, on crearem les tres particions de disc amb **10 GB d’espai** i les afegirem.
+La direcció ha expressat la necessitat urgent de renovar els seus sistemes de servidors per garantir que la informació estigui protegida contra fallades de disc i que l'espai pugui ser ampliat sense interrupcions. Com a tècnics d’Everpia, teniu l'encàrrec de dissenyar i documentar dues solucions d'emmagatzematge (Linux i Windows) que compleixin els principis d'alta disponibilitat, redundància i escalabilitat. Com que és una prova de concepte, es farà amb màquines virtuals.
 
-## 3. Muntatge dels discos
-Després entrarem a la màquina virtual i muntarem els 3 discos dins d'ella, i crearem un grup.
+---
 
-## 4. Comprovació
-Utilitzant aquesta comanda podrem comprovar l’estat dels discos.
+# 1. Part Linux: LVM amb Zorin OS
 
-## 5. Creació del grup de volums
-Crearem un **grup de volums** anomenat `lv01`.
+S'utilitzarà Zorin OS (o similar) per demostrar l'ús del gestor de volums lògics (LVM).
 
-## 6. Format del VG
-Després formatem el VG per un sistema d'arxius.
+## Requisits de la Implementació i Demostració
 
-## 7. Muntatge permanent
-Després entrarem en aquest arxiu i el modificarem perquè estigui muntat permanentment.
+### Configuració inicial
+- Crear un grup de volums (VG) i un volum lògic (LV) utilitzant inicialment dos discs de 10 GB.
+- Formatar i muntar el volum automàticament amb `/etc/fstab`.
 
-## 8. Comprovació addicional
-Aquesta comanda és simplement de comprovació.
+### Alta Disponibilitat
+- Implementar la configuració d’un mirall (**lvm_mirror**) que protegeixi la informació davant fallades.
 
-## 9. Alta Disponibilitat
-Implementarem la configuració d’un **mirall (lvm_mirror)** que protegeixi la informació davant la fallada d'un disc.
+### Instantànies (snapshots)
+1. Afegir dos discs de 10 GB al grup de volums.
+2. Crear un volum `lvm_dades` amb el primer disc afegit, formatar-lo i muntar-lo.
+3. Afegir arxius al volum (per exemple, imatges).
+4. Utilitzar el segon disc per crear un snapshot (`lv_snapshot`).
+5. Documentar com restaurar el snapshot si les dades originals es corrompen.
 
-## 10. Creació del volum “dades”
-Crearem un altre volum anomenat **dades**.
+### Escalabilitat
+- Ampliar el volum `lv_dades` utilitzant l'espai lliure del grup de volums.
 
-## 11. Muntatge
-Muntem la còpia.
+---
 
-## 12. Creació d’un arxiu
-Ara crearem un arxiu per posar-lo dins de *dades*.
+# 2. Part Windows: Espais d'Emmagatzematge (Storage Spaces)
 
-## 13. Modificació de l’arxiu
-I tornem a modificar l’arxiu.
+S’utilitzarà Windows 11 per demostrar les configuracions possibles mitjançant Storage Spaces.
 
-## 14. Creació del LV “snapshot”
-En aquesta captura crearem un altre LV que es dirà **snapshot**.
+## Requisits de la Implementació i Demostració
 
-## 15. Replicació d’estructura
-Crearem un altre cop l’estructura d’abans.
+### Configuració inicial
+- Crear un *Storage Pool* inicial amb tres discs de 10 GB.
 
-## 16. Modificació de l’arxiu
-Modificarem l'arxiu un altre cop.
+### Estudi de configuracions
+- **Mirroring:** Crear un espai amb dos discs i comprovar l’alta disponibilitat.
+- **Parity:** Crear un espai amb tres discs i explicar l’eficiència davant el mirall.
+- **Triple Mirroring:** Afegir els discs necessaris per crear aquest tipus de resiliència.
 
-## 17. Creació d’un arxiu a snapshot
-Crearem un altre arxiu per posar-lo a *snapshot*.
+### Gestió
+- Mostrar des de la consola de Windows:
+  - L’estat dels discos
+  - L’estat del *storage pool*
+  - Facilitat de manteniment i substitució
 
-## 18. Creació del LV “copia”
-Crearem un altre LV que es dirà **copia**, que contindrà el mateix que *snapshot*.
+---
 
-## 19. Escalabilitat
-Demonstrarem el procés d'ampliació utilitzant l'espai lliure del grup de volums per **ampliar el volum dades**.
+# 3. Com treballareu i què lliurareu?
+
+- El treball és en grup.
+- Es dividirà en dos equips:
+  - Equip Linux → implementació amb LVM
+  - Equip Windows → implementació amb Storage Spaces
+- Cada membre prepara el seu guió de comandes i documentació.
+- Cada parella realitza la seva demostració i genera documentació.
+- El grup revisa els documents finals.
+- Cada membre puja la documentació al seu repositori GitHub dins la carpeta `tasca03/`.
+
+La carpeta **tasca03** ha d’incloure:
+- Un arxiu `README.md` amb la descripció de la tasca i enllaços als dos documents.
+- Dos documents de la pràctica:
+  - `linux_lvm.md`
+  - `windows_storage_spaces.md`
+
+La nota és conjunta. La comunicació i organització interna és essencial.
+
+Posteriorment s’haurà de preparar una presentació amb les conclusions.
+
+---
+
+# Material de classe (Moodle)
+- LVM Linux
+- Espais d’emmagatzematge (Windows)
