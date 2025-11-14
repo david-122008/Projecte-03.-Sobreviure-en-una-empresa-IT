@@ -3,7 +3,7 @@
 ## 1. Creació de la màquina
 El primer de tot serà crear la màquina amb els paràmetres inicials.
 
-[Imatge 01](IMG/IMA_1.png)
+[Imatge 01](IMG/IMA1.png)
 
 ## 2. Configuració de l’espai de la màquina
 Després entrarem a la configuració d'espai de la màquina, on crearem les tres particions de disc amb **10 GB d’espai** i les afegirem.
