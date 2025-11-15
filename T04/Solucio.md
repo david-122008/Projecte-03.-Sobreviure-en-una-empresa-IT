@@ -12,11 +12,13 @@ Primer configurem el nom de la màquina servidor, assignant:
 - Nom complet: `server.innovatech07.test`
 
 ![Imatge 01](IMA/ING1.png)
+
 ![Imatge 01](IMA/ING2.png)
 
 Després comprovem que el canvi s’ha aplicat correctament amb la comanda `hostname`.
 
 ![Imatge 01](IMA/ING3.png)
+
 ![Imatge 01](IMA/ING4.png)
 
 ---
@@ -29,6 +31,7 @@ Configurem els adaptadors de xarxa:
 - El segon en mode **Només amfitrió**
 
 ![Imatge 01](IMA/ING5.png)
+
 ![Imatge 01](IMA/ING6.png)
 
 Habilitem els adaptadors editant l’arxiu de xarxa.
