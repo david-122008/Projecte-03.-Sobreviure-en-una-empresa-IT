@@ -273,3 +273,5 @@ Comprovem que s’ha creat la seva carpeta personal.
 ---
 
 # Fi del document
+
+[torna al enunciat](README.md)
